@@ -25,7 +25,8 @@ a {
 }
 
 article {
-  background-color: var(--surface);
+  background-color: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(6px);
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -159,7 +160,15 @@ nav ul {
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  /* TODO */
+  article {
+    background-color: var(--surface);
+    backdrop-filter: none;
+  }
+
+  * {
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+  }
 }
 
 @media (forced-colors: active) {
