@@ -1,3 +1,44 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f4f6f8;
+  --text: #111827;
+  --accent: #0056b3;
+  --border: #d1d5db;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+article {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: left;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -54,7 +95,11 @@ nav ul {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* TODO */
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --text: #f3f4f6;
+    --accent: #60a5fa;
+    --border: #374151;
   }
 }
 
