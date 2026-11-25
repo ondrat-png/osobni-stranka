@@ -172,5 +172,23 @@ nav ul {
 }
 
 @media (forced-colors: active) {
-  /* TODO */
+  :root {
+    forced-color-adjust: auto;
+    --bg: Canvas;
+    --surface: Canvas;
+    --text: CanvasText;
+    --accent: LinkText;
+    --border: ButtonBorder;
+  }
+
+  article,
+  th,
+  td {
+    border: 1px solid ButtonBorder;
+  }
+
+  a {
+    color: LinkText;
+    text-decoration: underline;
+  }
 }
